@@ -143,7 +143,7 @@ class WeightedCELossTrainer(Trainer):
             num_labels = model.config.num_labels
 
         # Compute the loss
-        loss = loss_fct(logits.view(-1, num_labels), labels.view(-1))
+        loss = loss_fct(logits.view(-1, num_labels), labels.view(-1).long())
         return (loss, outputs) if return_outputs else loss
 
 

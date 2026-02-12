@@ -362,8 +362,8 @@ def train_sequence_classifier(
         args=train_args,
         train_dataset=train_dataset,
         eval_dataset=valid_dataset,
-        pos_weights=pos_weight,
-        neg_weights=neg_weight,
+        pos_weight=pos_weight,
+        neg_weight=neg_weight,
         callbacks=[early_stopping],
         data_collator=data_collator,
     )
